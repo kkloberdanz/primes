@@ -40,7 +40,7 @@ fn parallel_is_prime_range(
 fn parallel_is_prime(n: u64, num_threads: u64) -> bool {
     if n < 2 {
         false
-    } else if n < num_threads * 1000 {
+    } else if n < num_threads * 1000000000 {
         return is_prime(n);
     } else {
         let mut start = 2;
