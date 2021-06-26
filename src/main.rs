@@ -29,7 +29,7 @@ fn parallel_is_prime_range(
             flag.store(false, Ordering::Relaxed);
             return false;
         } else {
-            if !flag.load(Ordering::Relaxed) {
+            if ((i & 0xfff) == 0) && (!flag.load(Ordering::Relaxed)) {
                 return false;
             }
         }
