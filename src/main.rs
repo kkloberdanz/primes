@@ -76,7 +76,7 @@ fn main() {
 
     for i in start..=end {
         if parallel_is_prime(i, 4) {
-            println!("{} is prime", i);
+            println!("{}", i);
             std::io::stdout().flush().unwrap();
         }
     }
